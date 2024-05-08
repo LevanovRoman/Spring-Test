@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dbpostgres:
+    image: postgres
+    volumes:
+      - ./pokemonapicourse-data:/var/lib/postgresql/data
+    ports:
+      - "5444:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: pokemonapicourse
+
+volumes:
+  pokemonapicourse-data:
